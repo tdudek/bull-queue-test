@@ -1,0 +1,21 @@
+{
+  "name": "bulls-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "tsc && node ./runner/index.js"
+  },
+  "devDependencies": {
+    "@types/bull": "^3.10.5"
+  },
+  "dependencies": {
+    "redis-server": "^1.2.2",
+    "typescript": "^3.6.4",
+    "bull": "^3.11.0",
+    "bull-board": "^0.5.0",
+    "concurrently": "^5.0.0",
+    "express": "^4.17.1",
+    "wait-on": "^3.3.0"
+  }
+}
