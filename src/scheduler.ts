@@ -2,7 +2,7 @@ import queues from "./queues";
 
 let counter = 1;
 
-setInterval(() => {
+const publishRandomPodcasts = () => {
   const id = `2395233${counter}`;
 
   queues.podcastDiscovery.add({
@@ -12,4 +12,8 @@ setInterval(() => {
   });
 
   counter++;
-}, 100);
+
+  setTimeout(publishRandomPodcasts, (counter % 50) === 0 ? 3000 : 100);
+}
+
+publishRandomPodcasts();
